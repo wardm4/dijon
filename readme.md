@@ -1,73 +1,47 @@
 <p align="center">
-  <img height="200" src="https://u.peppe.rs/lz.png">
+  <img height="200" src="https://imgur.com/a/rhzDO5U.png">
 </p>
 
 ### About
 
-`dijo` is a habit tracker. It is curses-based, it runs in
-your terminal. `dijo` is scriptable, hook it up [with
-external
-programs](https://github.com/NerdyPepper/dijo/wiki/Auto-Habits)
-to track events without moving a finger. `dijo` is modal,
-much like a certain text editor.  
+`dijon` is a fork of `dijo`.
 
-### Features
+`dijo` is a curses-based habit tracker. It is curses-based, it runs in
+your terminal. Check out the original `dijo` to see all the base features. All features of `dijo` still exist in `dijon`.
 
- - **vim like motions**: navigate `dijo` with `hjkl`!
- - **`dijo` is modal**: different modes to view different
-   stats!
- - **vim like command mode**: add with `:add`, delete with
-   `:delete` and above all, quit with `:q`!.
- - **fully scriptable**: [configure `dijo` to
-   track your `git` commits](https://github.com/NerdyPepper/dijo/wiki/Auto-Habits)!
+When I found `dijo`, it was borderline perfect for what I wanted.
 
-### Install
+But I wanted just a handful of extra features.
 
-To get the latest release of `dijo`, prefer installing it
-via `cargo`. Unofficial packages exist for some package
-managers as well. You can also browse the
-[Releases](https://github.com/NerdyPepper/dijo/releases)
-page for prebuilt binaries.
+### Features new to dijon
 
-#### Cargo
+As of now, these are all planned. None have been implemented.
+
+ - Track everything, not just habits: sleep, weight, caffeine intake, etc.
+ - Weekly habits.
+
+ Look, dijo "let you track weekly habits" but in a strange way. 
+
+ Say I wanted to go to the gym 4 times a week.
+
+Dijo let you increment each time, so you'd get a 1 on Monday a 1 on Wednesday, etc. But there was nothing internal to tell you if you achieved that goal. Dijon fixes that.
+
+### Install via cargo
 
 ```shell
-# dijo requires rustc >= v1.42
+# dijon requires rustc >= v1.42
 $ rustup update
-
-$ cargo install dijo
+$ git clone https://github.com/wardm4/dijon.git
+$ cd dijon
+$ cargo install dijon
 ```
 If you aren't familiar with `cargo` or Rust, read the [complete
 installation](https://github.com/NerdyPepper/dijo/wiki/Install)
 guide.
 
-#### Nix
+#### Others
 
-`dijo` on nixpkgs (maintained by [@Infinisil](https://github.com/Infinisil)):
-
-```
-$ nix-env -f channel:nixpkgs-unstable -iA dijo
-```
-
-#### Snap
-
-`dijo` on sanpstore (maintained by [@purveshpatel511](https://github.com/purveshpatel511)):
-
-```
-$ sudo snap install dijo
-```
-
-
-#### Arch Linux
-
-Install [`dijo-bin`](https://aur.archlinux.org/packages/dijo-bin/) or [`dijo-git`](https://aur.archlinux.org/packages/dijo-git) from the AUR.
-
-#### Windows
-
-```
-# the default termion backend dosen't run on windows yet
-$ cargo install --no-default-features --features "crossterm-backend"
-```
+Sorry, I have not packaged dijon for any other package managers like snap yet.
 
 ### Usage
 
